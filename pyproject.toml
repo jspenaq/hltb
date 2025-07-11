@@ -71,3 +71,12 @@ select = [
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S101", "ANN001", "ANN201", "ANN202", "E402", "E501", "E711"]
 
+[tool.coverage.run]
+source = ["src/hltb"]
+omit = [
+    "tests/*",
+]
+
+[tool.coverage.report]
+fail_under = 95
+show_missing = true
